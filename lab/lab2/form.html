@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" class="form-control">
+    <title>My Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Đăng ký tài khoản</h2>
+        <form method="POST" action="formHandler.php">
+
+            <div class="form-component">
+                <label for="username" class="form-label">Tên đăng nhập</label>
+                <input type="text" name="username" id="username" class="form-control">
+            </div>
+    
+            <div class="form-component">
+                <label for="password" class="form-label">Mật khẩu</label>
+                <input type="password" name="password" id="password" class="form-control">
+            </div>
+    
+            <div class="form-component">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" name="email" id="email" class="form-control">
+            </div>
+    
+            <div class="form-component">
+                <label for="fullname" class="form-label">Họ và tên</label>
+                <input type="text" name="fullname" id="fullname" class="form-control">
+            </div>
+    
+            <div class="form-component">
+                <label for="dob" class="form-label">Ngày sinh</label>
+                <input type="date" name="dob" id="dob" class="form-control">
+            </div>
+    
+            <div class="form-component">
+                <label for="gender" class="form-label">Giới tính</label>
+                <div class="sub-component">
+                    <input type="radio" name="gender" value="male" class="form-control" id="gender1">
+                    <label for="gender1" class="sub-label">Nam</label>
+                </div>
+                <div class="sub-component">
+                    <input type="radio" name="gender" value="female" class="form-control" id="gender2">
+                    <label for="gender2" class="sub-label">Nữ</label>
+                </div>
+                <div class="sub-component">
+                    <input type="radio" name="gender" value="other" class="form-control" id="gender3">
+                    <label for="gender3" class="sub-label">Khác</label>
+                </div>
+            </div>
+    
+            <div class="form-component">
+                <label for="hobbies" class="form-label">Sở thích</label>
+                <div class="sub-component">
+                    <input type="checkbox" name="hobbies[]" value="football" class="form-control" id="hobby1">
+                    <label for="hobby1" class="sub-label">Đá bóng</label>
+                </div>
+                <div class="sub-component">
+                    <input type="checkbox" name="hobbies[]" value="movie" class="form-control" id="hobby2">
+                    <label for="hobby2" class="sub-label">Xem phim</label>
+                </div>
+                <div class="sub-component">
+                    <input type="checkbox" name="hobbies[]" value="music" class="form-control" id="hobby3">
+                    <label for="hobby3" class="sub-label">Nghe nhạc</label>
+                </div>
+            </div>
+    
+            <div class="form-component">
+                <label for="hometown" class="form-label">Quê quán</label>
+                <select name="hometown" id="hometown" class="form-control">
+                    <option value="hanoi">Hà Nội</option>
+                    <option value="phutho">Phú Thọ</option>
+                    <option value="tphcm">TP. Hồ Chí Minh</option>
+                </select>
+            </div>
+
+            <div class="form-component">
+                <label for="self-intro" class="form-label">Giới thiệu bản thân</label>
+                <textarea name="self-intro" id="self-intro" class="form-control"></textarea>
+            </div>
+    
+            <div class="form-button-group">
+                <input class="form-button" type="submit" value="Submit">
+                <input class="form-button" type="reset" value="Reset">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

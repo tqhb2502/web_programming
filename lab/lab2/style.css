@@ -1,0 +1,97 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Open Sans", sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: aquamarine;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    background-color: white;
+    width: 40%;
+    border: 1px solid white;
+    border-radius: 16px;
+    margin: 32px 0;
+    padding: 32px 0;
+}
+
+h2 {
+    margin-bottom: 16px;
+    font-size: 24px;
+}
+
+form {
+    width: 100%;
+}
+
+.form-component {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 16px 32px;
+}
+
+.form-label {
+    margin-top: 10px;
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+.form-control {
+    height: 36px;
+    font-size: 14px;
+    padding: 8px;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+.form-control:hover {
+    border: 1px solid #1dbfaf;
+}
+
+form .sub-component {
+    display: flex;
+    align-items: center;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    margin-right: 8px;
+}
+
+.sub-label {
+    font-size: 14px;
+}
+
+.form-button-group {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 32px;
+    margin-top: 40px;
+    margin-bottom: 16px;
+}
+
+.form-button {
+    padding: 8px 16px;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+.form-button:hover {
+    border: 1px solid #1dbfaf;
+}
