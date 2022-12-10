@@ -1,0 +1,12 @@
+<student-info>
+    <name>Trần Quang Huy</name>
+    <dob>25/02/2001</dob>
+    <gender>Nam</gender>
+    <address>Phường Hoàng Văn Thụ, quận Hoàng Mai, thành phố Hà Nội</address>
+    <phone>0815450538</phone>
+    <email>huy.tq190093@sis.hust.edu.vn</email>
+    <id>20190093</id>
+    <class>Việt-Nhật 02</class>
+    <course>HEDSPI-K64</course>
+    <university>HUST</university>
+</student-info>
