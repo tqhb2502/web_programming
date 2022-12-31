@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Search</title>
+    <script>
+
+        var httpObject = null;
+
+        function getHTTPObject() {
+            if (window.ActiveXObject) {
+                return new ActiveXObject("Microsoft.XMLHTTP");
+            } else if (window.XMLHttpRequest) {
+                return new XMLHttpRequest();
+            } else {
+                alert("Your browser does not support AJAX.");
+                return null;
+            }
+        }
+
+        function setOutput() {
+            if (httpObject.readyState === 4 && httpObject.status === 200) {
+                document.getElementById('search-result').innerHTML = httpObject.responseText;
+            }
+        }
+
+        function sendSearchRequest() {
+            httpObject = getHTTPObject();
+            productName = document.querySelector('input[name="product-name"]').value;
+            if (httpObject !== null) {
+                httpObject.open("GET", "searchEngine.php?product-name=" + productName, true);
+                httpObject.send(null);
+                httpObject.onreadystatechange = setOutput;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Product Search</h1>
+    <form>
+        Product name: <input type="text" name="product-name" onchange="sendSearchRequest()">
+    </form>
+    <h3>Search result:</h3>
+    <div id="search-result"></div>
+</body>
+</html>

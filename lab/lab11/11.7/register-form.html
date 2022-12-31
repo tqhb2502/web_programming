@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Form</title>
+    <style>
+        input {
+            margin-bottom: 16px;
+        }
+        label {
+            display: inline-block;
+            width: 100px;
+        }
+    </style>
+    <script>
+        function validateUsername() {
+            username = document.querySelector('input[name="username"]').value;
+            if (username === "") {
+                alert("Không được để trống tên người dùng!")
+                return false;
+            }
+            return true;
+        }
+        function validatePassword() {
+            password = document.querySelector('input[name="password"]').value;
+            if (password === "") {
+                alert("Không được để trống mật khẩu!")
+                return false;
+            }
+            return true;
+        }
+        function validateEmail() {
+            email = document.querySelector('input[name="email"]').value;
+            emailRegEx = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            if (emailRegEx.test(email)) {
+                return true;
+            } else {
+                alert("Email không hợp lệ!")
+                return false;
+            }
+        }
+        function validateTelephone() {
+            telephone = document.querySelector('input[name="telephone"]').value;
+            telephoneRegEx = /^((\+84)|0)[0-9]{9}$/;
+            if (telephoneRegEx.test(telephone)) {
+                return true;
+            } else {
+                alert("Số điện thoại không hợp lệ!")
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Register Form</h1>
+    <form action="">
+
+        <label>Username:</label>
+        <input type="text" name="username" onblur="validateUsername()"> <br>
+
+        <label>Password:</label>
+        <input type="password" name="password" onblur="validatePassword()"> <br>
+
+        <label>Email:</label>
+        <input type="text" name="email" onblur="validateEmail()"> <br>
+
+        <label>Telephone:</label>
+        <input type="text" name="telephone" onblur="validateTelephone()"> <br>
+
+        <input type="submit" value="Register">
+        <input type="reset" value="Reset">
+    </form>
+    <script>
+        submitButton = document.querySelector('input[type="submit"]');
+        submitButton.onclick = function(event) {
+            if (!validateUsername() || !validatePassword() || 
+                !validateEmail() || !validateTelephone()) {
+
+                event.preventDefault();
+            }
+        }
+    </script>
+</body>
+</html>

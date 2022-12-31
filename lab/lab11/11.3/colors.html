@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handling Practice</title>
+    <style>
+        h2 {
+            display: inline-block;
+            margin: 16px 16px;
+        }
+        .red-link {
+            color: red;
+        }
+        .green-link {
+            color: green;
+        }
+        .blue-link {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h2 class="red-link" onmouseover="changeToRed()" onmouseout="restoreColor()">
+        RED
+    </h2>
+    <h2 class="green-link" onmouseover="changeToGreen()" onmouseout="restoreColor()">
+        GREEN
+    </h2>
+    <h2 class="blue-link" onmouseover="changeToBlue()" onmouseout="restoreColor()">
+        BLUE
+    </h2>
+    <p>
+        Write a simple HTML document called colors.html containing three colored links at the top of the page
+        labeled RED, GREEN, and BLUE. Under the links there should be a small paragraph of text (you make this
+        up) with a starting color of BLACK. Using onMouseOver and onMouseOut events of the links, when a user
+        rolls over the each and any of the color labeled links, the color of the text in the paragraph below should
+        change to the color corresponding to the link the user is hovering over. When the user rolls off the link, the
+        color of the text should go back to it's starting color of BLACK.
+    </p>
+    <script>
+        paragraph = document.querySelector('p');
+        function changeToRed() {
+            paragraph.style.color = "red";
+        }
+        function changeToGreen() {
+            paragraph.style.color = "green";
+        }
+        function changeToBlue() {
+            paragraph.style.color = "blue";
+        }
+        function restoreColor() {
+            paragraph.style.color = "black";
+        }
+    </script>
+</body>
+</html>
